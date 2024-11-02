@@ -1,9 +1,12 @@
-import "../../styles/climate_styles.css";
+import "./climate_styles.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function Climate() {
   return (
-    <div>
-      <header>
+    <div className="climate-body">
+      <Navbar />
+      <header className="climate-header">
         <h1>Impact of Climate Change on Wildlife</h1>
       </header>
       <main>
@@ -30,9 +33,7 @@ export default function Climate() {
           </p>
         </section>
       </main>
-      <footer>
-        <p>&copy; 2024 Wildlife Conservation Project</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

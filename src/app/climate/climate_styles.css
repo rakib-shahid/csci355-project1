@@ -1,11 +1,11 @@
-body {
+.climate-body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
 }
 
-header {
+.climate-header {
   background-color: #4caf50;
   color: white;
   padding: 1rem;

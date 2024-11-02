@@ -1,47 +1,15 @@
-// "use client";
-
-// import "../styles/styles.css";
-// import Script from "next/script";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <div className="header">
-        <nav className="backdrop-blur-sm">
-          <div className="site-logo">
-            <a href="">
-              <img src="assets/logo.png" alt="logo" />
-            </a>
-          </div>
-          <ul>
-            <li>
-              <a href="#wildlife">Wildlife</a>
-            </li>
-            <li>
-              <a href="/climate">Climate</a>
-            </li>
-            <li>
-              <a href="#forests">Forests</a>
-            </li>
-            <li>
-              <a href="#oceans">Oceans</a>
-            </li>
-            <li>
-              <a href="#about">About Us</a>
-            </li>
-          </ul>
-          <div className="search">
-            <input type="text" className="input" placeholder="Search..." />
-            <button className="btn">
-              <img src="assets/search-alt-1-svgrepo-com.svg" alt="search" />
-            </button>
-          </div>
-        </nav>
+        <Navbar />
 
         <section className="mainImg"></section>
-        <div class="hero-div">Environmental Awareness</div>
+        <div className="hero-div">Environmental Awareness</div>
       </div>
-
       <div className="card-container flex-1">
         <h2>Sample</h2>
         <div className="content-grid">
@@ -117,10 +85,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="footer">
-        <p>&copy; 2024 Sample. All Rights Reserved.</p>
-      </div>
-      <script defer src="script.js" strategy="afterInteractive"></script>
+      <Footer />
     </div>
   );
 }
