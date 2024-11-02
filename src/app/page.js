@@ -1,13 +1,8 @@
-"use client";
+// "use client";
 
-import "../styles/styles.css";
-import { useEffect, useRef } from "react";
+// import "../styles/styles.css";
 
 export default function Home() {
-  const mainImgRef = useRef(null);
-  const searchRef = useRef(null);
-  const inputRef = useRef(null);
-
   return (
     <div className="min-h-screen flex flex-col">
       <div className="header">
@@ -22,7 +17,7 @@ export default function Home() {
               <a href="#wildlife">Wildlife</a>
             </li>
             <li>
-              <a href="#climate">Climate</a>
+              <a href="/climate">Climate</a>
             </li>
             <li>
               <a href="#forests">Forests</a>
