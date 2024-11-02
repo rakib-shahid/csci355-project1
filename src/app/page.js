@@ -1,7 +1,7 @@
 // "use client";
 
 // import "../styles/styles.css";
-import Script from "next/script";
+// import Script from "next/script";
 
 export default function Home() {
   return (
@@ -120,7 +120,7 @@ export default function Home() {
       <div className="footer">
         <p>&copy; 2024 Sample. All Rights Reserved.</p>
       </div>
-      <Script src="script.js" strategy="afterInteractive"></Script>
+      <script defer src="script.js" strategy="afterInteractive"></script>
     </div>
   );
 }
