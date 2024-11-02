@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import "../styles/nav_styles.css"; // Ensure your styles are imported
+import "../styles/nav_styles.css";
 
 export default function Navbar() {
   const [searchActive, setSearchActive] = useState(false);
