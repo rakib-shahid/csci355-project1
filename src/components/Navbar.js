@@ -70,7 +70,10 @@ export default function Navbar() {
           placeholder="Search..."
           style={{ color: "black" }}
         />
-        <button className="btn ml-2 bg-white" onClick={handleSearchClick}>
+        <button
+          className="search-button ml-2 bg-white"
+          onClick={handleSearchClick}
+        >
           <img
             src="assets/search-alt-1-svgrepo-com.svg"
             alt="search"

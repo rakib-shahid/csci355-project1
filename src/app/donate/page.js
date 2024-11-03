@@ -6,25 +6,50 @@ import "./donate_styles.css";
 
 export default function Donate() {
   useEffect(() => {
-    const search = document.querySelector(".search");
-    const btn = document.querySelector(".btn");
-    const input = document.querySelector(".input");
+    const searchElement = document.querySelector(".search");
+    const buttonElement = document.querySelector(".btn");
+    const inputElement = document.querySelector(".form-control input");
 
-    btn.addEventListener("click", () => {
-      search.classList.toggle("active");
-      input.focus();
+    const handleButtonClick = () => {
+      searchElement.classList.toggle("active");
+      inputElement.focus();
+    };
+
+    buttonElement.addEventListener("click", handleButtonClick);
+
+    const labelElements = document.querySelectorAll(".form-control label");
+    const moneyButtons = document.querySelectorAll(".donate-btn");
+
+    moneyButtons.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        const amount = button.textContent.replace("$", "");
+        inputElement.value = amount;
+      });
     });
 
-    const labels = document.querySelectorAll(".form-control label");
-    labels.forEach((label) => {
-      label.innerHTML = label.innerText
-        .split("")
-        .map(
-          (letter, idx) =>
-            `<span style="transition-delay:${idx * 50}ms">${letter}</span>`
-        )
-        .join("");
+    const transformLabelText = (label) => {
+      const originalText = label.innerText;
+      const splitCharacters = originalText.split("");
+      const wrappedCharacters = splitCharacters.map((char, idx) => {
+        const displayChar = char === " " ? "&nbsp;" : char;
+        return `<span style="transition-delay:${
+          idx * 50
+        }ms">${displayChar}</span>`;
+      });
+      return wrappedCharacters.join("");
+    };
+
+    labelElements.forEach((label) => {
+      label.innerHTML = transformLabelText(label);
     });
+
+    return () => {
+      buttonElement.removeEventListener("click", handleButtonClick);
+      moneyButtons.forEach((button) => {
+        button.removeEventListener("click", () => {});
+      });
+    };
   }, []);
 
   return (
