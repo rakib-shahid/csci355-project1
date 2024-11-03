@@ -39,9 +39,15 @@ export default function Donate() {
             />
           </div>
           <div className="message">
-            <h2>Donate!</h2>
-            <p>Be a part of the change and help us make a difference today.</p>
+            <h2 className="text-4xl font-extrabold text-white">Donate!</h2>
+            <p className="text-2xl">
+              Be a part of the change and help us make a difference{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-700 to-purple-900 font-extrabold">
+                today.
+              </span>
+            </p>
           </div>
+
           <div className="donate-container flex flex-col justify-center">
             <h1 className="text-4xl font-extrabold text-black">
               Save the Planet!
