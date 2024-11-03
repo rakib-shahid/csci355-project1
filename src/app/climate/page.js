@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 
 export default function Climate() {
   return (
-    <div className="climate-body mainContainer">
+    <div className="climate-body flex flex-col mainContainer">
       <Navbar />
       <header className="climate-header">
         <h1>Impact of Climate Change on Wildlife</h1>
@@ -34,6 +34,7 @@ export default function Climate() {
         </section>
       </main>
       <Footer />
+      {/* <script src="climate_change.js"></script> */}
     </div>
   );
 }

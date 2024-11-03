@@ -21,7 +21,7 @@ export default function Navbar() {
       <ul className="flex space-x-6">
         <li>
           <Link
-            href="#wildlife"
+            href="/"
             className="text-white font-bold text-lg hover:text-gray-300"
           >
             Wildlife
@@ -37,13 +37,13 @@ export default function Navbar() {
         </li>
         <li>
           <Link
-            href="#forests"
+            href="/donate"
             className="text-white font-bold text-lg hover:text-gray-300"
           >
-            Forests
+            Donate
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             href="#oceans"
             className="text-white font-bold text-lg hover:text-gray-300"
@@ -58,7 +58,7 @@ export default function Navbar() {
           >
             About Us
           </Link>
-        </li>
+        </li> */}
       </ul>
 
       <div className={`search relative ${searchActive ? "active" : ""}`}>
