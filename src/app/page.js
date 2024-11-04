@@ -1,13 +1,40 @@
+"use client";
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function Home() {
+  const [load, setLoad] = useState(0);
+
+  useEffect(() => {
+    let int = setInterval(() => {
+      setLoad((prevLoad) => {
+        if (prevLoad >= 100) {
+          clearInterval(int);
+          return 100;
+        }
+        return prevLoad + 1;
+      });
+    }, 5);
+
+    return () => clearInterval(int);
+  }, []);
+
+  const scale = (num, in_min, in_max, out_min, out_max) => {
+    return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
+  };
+
   return (
     <div className="flex flex-col mainContainer">
       <div className="header">
         <Navbar />
 
-        <section className="mainImg"></section>
+        <section
+          className="mainImg"
+          style={{
+            filter: `blur(${scale(load, 0, 100, 30, 0)}px)`,
+          }}
+        ></section>
         <div className="hero-div">Environmental Awareness</div>
       </div>
       <div className="card-container flex-1">
