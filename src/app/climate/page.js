@@ -32,6 +32,34 @@ export default function Climate() {
     };
   }, []);
 
+  useEffect(() => {
+    const images = document.querySelectorAll(".sliding-image");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("slide-in");
+          entry.target.classList.remove("slide-out");
+        } else {
+          if (entry.boundingClientRect.top > 0) {
+            entry.target.classList.remove("slide-in");
+            entry.target.classList.add("slide-out");
+          }
+        }
+      });
+    });
+
+    images.forEach((img) => {
+      observer.observe(img);
+    });
+
+    return () => {
+      images.forEach((img) => {
+        observer.unobserve(img);
+      });
+    };
+  }, []);
+
   return (
     <div className="climate-body flex flex-col mainContainer">
       <Navbar />
@@ -54,7 +82,7 @@ export default function Climate() {
         <div className="timeline-images">
           <div className="image-description">
             <img
-              className="timeline-image"
+              className="timeline-image sliding-image"
               src="https://files.worldwildlife.org/wwfcmsprod/images/IPCC_report_timeline_before_2020/original/z1mobdp00_WWF_IPCC_Timeline_for_web_before_2020.png"
               alt="IPCC Timeline Before 2020"
             />
@@ -76,7 +104,7 @@ export default function Climate() {
           </div>
           <div className="image-description">
             <img
-              className="timeline-image"
+              className="timeline-image sliding-image"
               src="https://files.worldwildlife.org/wwfcmsprod/images/IPCC_report_graphic_after_2020/original/92cr3sl6fv_IPCC_timeline_2020_on_1_.png"
               alt="IPCC Timeline After 2020"
             />
