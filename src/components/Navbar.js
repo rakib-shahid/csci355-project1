@@ -21,7 +21,7 @@ export default function Navbar() {
       <ul className="flex space-x-6">
         <li>
           <Link
-            href="/"
+            href="/wildlife"
             className="text-white font-bold text-lg hover:text-gray-300"
           >
             Wildlife
