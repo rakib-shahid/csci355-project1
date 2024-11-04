@@ -17,13 +17,13 @@ export default function Home() {
             <img src="assets/pexels-pixabay-46540.jpg" alt="hippo" />
             <h3 className="text-4xl m-10">Wildlife Conservation</h3>
             <p>
-              Our planet's biodiversity is essential for maintaining balanced
-              ecosystems. From majestic hippos to the tiniest insects, every
-              creature plays a vital role in our world. However, deforestation,
-              habitat loss, and poaching have pushed countless species toward
-              extinction. It's time to take action, not only to preserve these
-              incredible animals but also to protect the future of our
-              environment.
+              Our planet&apos;s biodiversity is essential for maintaining
+              balanced ecosystems. From majestic hippos to the tiniest insects,
+              every creature plays a vital role in our world. However,
+              deforestation, habitat loss, and poaching have pushed countless
+              species toward extinction. It&apos;s time to take action, not only
+              to preserve these incredible animals but also to protect the
+              future of our environment.
             </p>
           </div>
           <div className="content" id="example2">
