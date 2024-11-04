@@ -22,7 +22,7 @@ export default function Navbar() {
         <li>
           <Link
             href="/wildlife"
-            className="text-white font-bold text-lg hover:text-gray-300"
+            className="text-5xl text-white font-bold text-lg hover:text-gray-300"
           >
             Wildlife
           </Link>
@@ -30,7 +30,7 @@ export default function Navbar() {
         <li>
           <Link
             href="/climate"
-            className="text-white font-bold text-lg hover:text-gray-300"
+            className="text-5xl text-white font-bold text-lg hover:text-gray-300"
           >
             Climate
           </Link>
@@ -38,7 +38,7 @@ export default function Navbar() {
         <li>
           <Link
             href="/donate"
-            className="text-white font-bold text-lg hover:text-gray-300"
+            className="text-5xl text-white font-bold text-lg hover:text-gray-300"
           >
             Donate
           </Link>

@@ -400,14 +400,14 @@ article {
 }
 
 /* Footer background */
-footer {
+/* footer {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("/assets/photo-1441974231531-c6227db76b6e.jpeg");
   background-size: cover;
   background-position: center;
   color: white;
   min-height: 100px;
-}
+} */
 
 /* Update FAQ styling for better contrast */
 .faq {

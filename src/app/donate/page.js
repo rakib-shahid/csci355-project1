@@ -54,8 +54,8 @@ export default function Donate() {
 
   return (
     <div className="full-height-container">
+      <Navbar />
       <div className="flex flex-col min-h-screen">
-        <Navbar />
         <div className="main-container">
           <div className="donate-image">
             <img
@@ -114,8 +114,8 @@ export default function Donate() {
             </form>
           </div>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

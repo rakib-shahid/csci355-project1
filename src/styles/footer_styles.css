@@ -1,8 +1,9 @@
 .footer {
-  background-color: #1b4332;
   color: #fff;
   text-align: center;
   padding: 20px;
   position: relative;
   width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("/assets/photo-1441974231531-c6227db76b6e.jpeg");
 }
