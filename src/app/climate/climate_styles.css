@@ -6,7 +6,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  height: 100vh;
+  /* height: 100vh; */
   margin: 0px;
 }
 
@@ -230,6 +230,10 @@ body {
   height: 15px;
   background: linear-gradient(45deg, #28a745, #1b4332);
   border-radius: 50%;
+}
+
+climate-container {
+  flex: 1;
 }
 
 /* .footer {

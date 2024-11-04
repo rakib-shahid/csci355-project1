@@ -15,43 +15,6 @@ body {
   width: 100%;
 }
 
-.site-logo {
-  width: 5%;
-  height: 5%;
-  position: relative;
-  display: inline-block;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.site-logo img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
-
-/* shine effect, create diagonal bar and animate across on hover */
-.site-logo::after {
-  content: "";
-  position: absolute;
-  top: -100%;
-  left: 0;
-  width: 10%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.815);
-  transform: rotate(45deg);
-  transition: all 0.3s ease-in-out;
-  opacity: 0;
-}
-
-.site-logo:hover::after {
-  top: 100%;
-  left: 100%;
-  opacity: 1;
-  transition: all 0.5s ease-in-out;
-}
-
 .mainImg {
   position: absolute;
   top: 0;
@@ -137,16 +100,7 @@ body {
   nav a {
     font-size: 1rem;
   }
-  .logo {
-    width: 60px;
-    height: 60px;
-    margin-right: calc((100% - 120px - 240.65px) / 2);
-  }
 
-  .logo img {
-    width: 60px;
-    height: 60px;
-  }
   .search {
     padding-top: 8px;
   }
